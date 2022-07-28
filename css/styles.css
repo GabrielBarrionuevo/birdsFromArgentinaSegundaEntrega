@@ -22,7 +22,7 @@ html {
 body {
     display: grid;
     grid-template:
-    "encabezado     encabezado"     150px
+    "encabezado     encabezado"     100px
     "main           main"           1fr
     "footer         footer"         250px /
     1fr             5fr
@@ -78,18 +78,12 @@ body {
 /* ==============FLEX============== */
 /* ================================ */
 .header {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     align-items: center;
     justify-content: space-around;
 }
-/* Eliminar posteriormente */
-/* .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-} */
+
 .flex-containerInicio {
     display: flex;
     flex-direction: column;
@@ -135,21 +129,26 @@ header {
     opacity: 90%;
     position: fixed;
     width: 100%;
-    height: 150px;
+    height: 100px;
     z-index: 1000;
 }
-.tituloPrincipal {
-    /* margin-bottom: 10px; */
-    /* margin: 5px 0 auto; */
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .tituloPrincipal {
     font-size: 50px;
     text-align: left;
-}
-.lista-navegacion {
+} */
+/* .lista-navegacion {
     text-align: center;
     margin: 0 auto;
     padding: 0;
-}
-.lista-navegacion li {
+} */
+/* .lista-navegacion li {
     list-style: none;
     display: inline-block;
     font-size: 20px;
@@ -157,12 +156,12 @@ header {
     padding: 5px;
     border-radius: 3px;
     background-color: #f9f9f9ff;
-}
-
+} */
+/* 
 .lista-navegacion li a {
     color: #6883baff;
     text-decoration: none;
-}
+} */
 
 /* ******************** */
 /* MAIN */
@@ -349,12 +348,11 @@ footer {
 
 /* PRUEBA MENU BOOTSTRAP */
 .bg-light {
-    /* No comprendo esta propiedad pero la encontré revisando el código desde la web. Mi objetivo es dejar transparente el nav para poder ver el fondo azul que puse originalmetne en mi diseño. */
     --bs-bg-opacity: 0;
 }
 .navbar-brand {
     color: #f9f9f9ff;
-    font-size: 3.5em;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 .nav-link {
@@ -365,19 +363,15 @@ footer {
 }
 .container-fluid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     opacity: 1;
-}
-.navbar-toggler {
-}
-.navbar-toggler-icon {
 }
 .iconoMenu {
     width: 40px;
-    /* No logro centrar el ícono */
-    /* padding: auto; */
-    /* height: 10px; */
     filter: invert();
+}
+.navbar-nav {
+    margin-left: auto;
 }
 
 
